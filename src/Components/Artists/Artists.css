@@ -1,0 +1,20 @@
+.Artists_head>h1{
+    margin-top: 70px;
+}
+
+.Artists_head{
+display: flex;
+align-items: center;
+}
+
+.Artists_head>p{
+    color: grey;
+    margin-top: 72px;
+    margin-left: 20px;
+}
+.Artists_table{
+    background-color: rgb(238, 229, 229) !important;
+    box-shadow: none !important;
+    color: black !important;
+
+}
