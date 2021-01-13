@@ -1,0 +1,53 @@
+.wrapper{
+    width: 100% !important;
+    height: 100vh!important;
+   
+    display: flex !important;
+  }
+  .wrapper_left{
+    width: 10% !important;
+    color: white !important;
+    text-align: center !important;
+    border: 1px solid #12005e;
+  
+  
+  
+  }
+
+  .wrapper_tab>p{
+      text-align: center;
+      margin: 0px;
+  }
+
+  .wrapper_right{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    
+  }
+  .wrapper_button{
+  margin-left: 1080px !important;
+    color:  white !important;
+    background-color:  #001064 !important;
+  }
+
+  .wrapper_right_top{
+border-bottom: 1px solid #12005e;
+padding: 10px;
+  }
+
+  .wrapper_logout{
+
+    position: absolute;
+    bottom: 0px;
+    left: 60px;
+  }
+
+  .wrapper_topicon{
+      border-bottom: 1px solid #12005e;
+      padding-top: 7px;
+      padding-bottom: 8px;
+  }
+  .circle_icon{
+      margin-left: 30px!important;
+  }

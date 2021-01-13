@@ -7,6 +7,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Artiststable from '../Artists_table/Artists_table';
+import Button from '@material-ui/core/Button';
+import SearchIcon from '@material-ui/icons/Search';
+import BackupIcon from '@material-ui/icons/Backup';
+import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+import Progressbar from '../Progress_bar/Progress_bar';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -57,28 +62,55 @@ export default function SimpleTabs() {
   };
 
   return (
+    <div>
     <div className="Artists">
+      <div className="Artists_progress">
+    <Progressbar />
+    <p style={{ color: '#12005e' }}> &nbsp;643 new properties to onboard</p>
+    </div>
+
       <div className="Artists_head">
-          <h1>Artists</h1>
-          <p>Last synced: Dec 27,2020</p>
-          </div>
-          
-    <div >
-      <AppBar  elevation={0}  position="static">
-        <Tabs className="Artists_table" value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="New" {...a11yProps(0)} />
-          <Tab label="Reviewed" {...a11yProps(1)} />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-<Artiststable /> 
+        <h1>Properties</h1>
+        <div className="Influencers_search">
+          <form className="Influencers_form" >
+            <input className="Influencers_input" type="text" placeholder="Search by Username" name="search2" />
+            <Button className="Influencers_searchicon" variant="contained" color="primary">
+              <SearchIcon />
+            </Button>
+          </form>
+        </div>
+        <Button className="Influencers_button" variant="contained" >
+          Add New Property
+      </Button>
+      </div>
+      </div>
+
+        <AppBar elevation={0} position="static">
+          <Tabs className="Artists_table" value={value} onChange={handleChange} aria-label="simple tabs example">
+            <Tab style={{ color: '#12005e' }} label="New" {...a11yProps(0)} />
+            <Tab style={{ color: '#12005e' }} label="Published" {...a11yProps(1)} />
+            <Tab style={{ color: '#12005e' }} label="Pre-Auction" {...a11yProps(2)} />
+            <Tab style={{ color: '#12005e' }} label="On-Auction" {...a11yProps(3)} />
+            <Tab style={{ color: '#12005e' }} label="Post-Auction" {...a11yProps(4)} />
+          </Tabs>
+        </AppBar>
+        <TabPanel value={value} index={0}>
+          <Artiststable />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          Content can be added here
      </TabPanel>
-      <TabPanel value={value} index={1}>
-Content can be added here 
+     <TabPanel value={value} index={2}>
+          Content can be added here
      </TabPanel>
-      
-    </div>
-    </div>
+     <TabPanel value={value} index={3}>
+          Content can be added here
+     </TabPanel>
+     <TabPanel value={value} index={4}>
+          Content can be added here
+     </TabPanel>
+
+      </div>
   );
 }
 

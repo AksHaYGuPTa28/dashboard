@@ -1,20 +1,62 @@
 .Artists_head>h1{
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .Artists_head{
 display: flex;
 align-items: center;
+color: #12005e;
+}
+.Artists_progress{
+    display: flex;
+    align-items: center;
+    width: 40% !important;
+margin-left: 700px;
 }
 
-.Artists_head>p{
-    color: grey;
-    margin-top: 72px;
-    margin-left: 20px;
-}
 .Artists_table{
-    background-color: rgb(238, 229, 229) !important;
+    background-color: white!important;
     box-shadow: none !important;
     color: black !important;
 
 }
+
+form.Influencers_form input[type=text] {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  .Influencers_form{
+      display: flex;
+      flex-direction: row;
+  }
+  .Influencers_input{
+      max-width: 300px;
+      
+  }
+  
+  .Influencers_search{
+      display: flex;
+      align-items: center;
+      margin-top: 45px;
+      margin-left: 570px;
+      
+  }
+  
+  .Influencers_searchicon{
+      color:  white !important;
+      background-color:  #001064 !important;
+  
+  }
+  
+  .Influencers_button{
+      margin-top: 45px !important;
+      margin-left: 10px !important;
+      color:  white !important;
+      background-color:  #001064 !important;
+  
+  
+  }

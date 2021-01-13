@@ -15,15 +15,15 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(Heatscore: number, Name: string, Username: string, Followers: number, Lead: string) {
-  return { Heatscore, Name, Username, Followers, Lead };
+function createData(location: string, manager: string, type: string, status: number, owner: string) {
+  return { location, manager, type, status, owner };
 }
 
 const rows = [
-  createData(5,'Mark Bardi', '@markbardi', 2000,'New'),
-  createData(2,'Mark Bardi', '@markbardi', 2000, 'Hot'),
-  createData(7,'Mark Bardi', '@markbardi', 2000, 'Hot'),
-  createData(2,'Mark Bardi', '@markbardi', 2000, 'Hot'),
+  createData('5th Avenue, New York','Person 1', 'Condo', 2000,'New'),
+  createData('5th Avenue, New York','Person 1', 'Condo', 2000, 'Hot'),
+  createData('5th Avenue, New York','Person 1', 'Condo', 2000, 'Hot'),
+  createData('5th Avenue, New York','Person 1', 'Condo', 2000, 'Hot'),
 ];
 
 export default function BasicTable() {
@@ -34,23 +34,24 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead  className="Artists_table2">
           <TableRow>
-            <TableCell  style={{color:"white"}}>Heat score</TableCell>
-            <TableCell  style={{color:"white"}} align="right">Name</TableCell>
-            <TableCell  style={{color:"white"}} align="right">Username</TableCell>
-            <TableCell  style={{color:"white"}} align="right">Followers</TableCell>
-            <TableCell  style={{color:"white"}} align="right">Lead Score</TableCell>
+            <TableCell  style={{color:"black", width: 150}}>Location</TableCell>
+            <TableCell  style={{color:"black", width: 200}} align="right">Manager</TableCell>
+            <TableCell  style={{color:"black", width: 200}} align="right">Type</TableCell>
+            <TableCell  style={{color:"black", width: 200}} align="right">Status</TableCell>
+            <TableCell  style={{color:"black", width: 200}} align="right">Owner</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.Heatscore}>
+            <TableRow key={row.location}>
               <TableCell component="th" scope="row">
-                {row.Heatscore}
+                {row.location}
               </TableCell>
-              <TableCell align="right">{row.Name}</TableCell>
-              <TableCell align="right">{row.Username}</TableCell>
-              <TableCell align="right">{row.Followers}</TableCell>
-              <TableCell align="right">{row.Lead}</TableCell>
+              
+              <TableCell align="right">{row.manager}</TableCell>
+              <TableCell align="right">{row.type}</TableCell>
+              <TableCell align="right">{row.status}</TableCell>
+              <TableCell align="right">{row.owner}</TableCell>
             </TableRow>
           ))}
         </TableBody>
